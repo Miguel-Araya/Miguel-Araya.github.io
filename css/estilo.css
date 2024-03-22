@@ -1,0 +1,224 @@
+*{
+
+    /* elimina el relleno interior de los elementos */
+    padding: 0;
+
+    /* elimina el espacio de los elementos */
+    margin: 0;
+
+    box-sizing: border-box;
+
+}
+
+h1{
+
+    text-align: center;
+
+    /* colores primarios rgb */
+    background-color: rgb(0, 73, 83);
+
+    /* color letra */
+    color: white;
+
+    padding: 20px;
+
+    /* medida de pixeles em */
+    font-size: 2.5em;
+
+}
+
+/* todos los elementos de la lista */
+nav ul{ 
+
+    background-color: rgb(0,178,178);
+
+    width: 100%;
+
+    list-style: none;
+
+    text-align: center;
+
+    padding: 10px 0;
+
+}  
+
+nav ul li{
+
+    display: inline-block;
+
+    margin-right: 20px;
+
+
+
+}
+
+nav ul li:last-child{
+
+    margin-right: 0;
+
+}
+
+nav ul li a{
+
+    text-decoration: none;
+
+    color: #FFF;
+
+    font-weight: bold;
+
+    padding: 10px 20px;
+
+    border-radius: 5px;
+
+    transition: background-color 0.3s ease;
+
+    font-size: 1.5em;
+
+}
+
+nav ul li a:hover{
+    /* 0.2 opacidad */
+    background-color: rgba(255, 255,255, 0.2);
+
+}
+
+img{
+
+    width: 200px;
+
+    height: 200px;
+    
+    /* redondea los bordes de la imagen */
+    border-radius: 50%;
+
+    /* escala la imagen si distorcionar su aspecto */
+    object-fit: cover;
+
+}
+
+.contenido{
+
+    /* contenedor flexible, sus elementos flexibles */
+    display: flex;
+    margin: 60px;
+}
+
+.articulos{
+
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    border-right: 3px solid #a6a1a1;
+
+}
+
+.secciones{
+
+    display: flex;
+    align-items: center;
+    padding: 40px;
+    font-size: 1.5em;
+
+}
+
+.menu-secundario{
+
+    width: 20%;
+    margin-top: 60px;
+
+}
+
+.menu-secundario a{
+
+    display: block;
+    text-align: center;
+    color: rgba(23,23,23,0.749);
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    font-size: 1.5em;
+
+}
+
+.menu-secundario a:hover{
+
+    background-color: #dcdcdc;
+
+}
+
+footer{
+
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+
+}
+
+footer p{
+
+    margin-bottom: 10px;
+
+}
+
+footer a{
+
+    color: #fff;
+    text-decoration: none;
+
+    /* es lo que tarda en mouse, tarda 0.3 en poner el color */
+    transition: color 0.3s ease;
+}
+
+footer a:hover{
+
+    color: #f2f2f2;
+
+}
+
+/*INICIO DE SESION*/
+
+.formulario{
+
+    width: 400px;
+    margin: 0 auto;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    padding: 20px;
+
+}
+
+.formulario input[type="password"],
+.formulario input[type="email"]{
+
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #7e7e7e;
+    border-radius: 4px;
+    box-sizing: border-box;
+
+}
+
+.formulario input[type="submit"]{
+
+    background-color: rgb(0,73,83);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.formulario input[type="submit"]:hover{
+
+    background-color: rgb(0,178,178);
+
+}
