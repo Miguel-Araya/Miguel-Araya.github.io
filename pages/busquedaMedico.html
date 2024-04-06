@@ -1,0 +1,212 @@
+<!-- Define documento HTML5 y que el navegador va a dectectarlo -->
+<!DOCTYPE html>
+
+<html lang="es">
+
+<!-- Configuracion metadatos y enlances -->
+<head>
+    <!-- Utilizar caracteres con tilde -->
+    <meta charset="UTF-8">
+
+    <!-- Parte responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Clínica Árbol de Seda</title>
+    
+    <!-- rel importancion; href donde esta ubicado  -->
+    <link rel="stylesheet" type="text/css" href="../css/estilo.css">
+    
+    <script src="../js/usuario.js"></script>
+
+    <script src="../js/medico.js"></script>
+
+    <script src="../js/estructura.js"></script>
+
+</head>
+
+<body>
+    
+    <!-- header -->
+
+    <main> 
+
+        <!-- Div, contenedores -->
+        <div class="contenido">
+           
+            <div class="formulario">
+
+                <h2>Filtro</h2>
+
+                <form id="formulario" method="post">
+
+                    <div class="usuario">
+
+                        <label>Nombre:</label>
+
+                        <input oninput="autoCompletar('nombre');" id="nombre" list="listaSugerencia" type="text">
+
+                    </div>
+                    
+                    <div class="usuario">
+
+                        <label>Especialidad:</label>
+
+                        <input oninput="autoCompletar('especialidad');" id="especialidad" list="listaSugerencia" type="text">
+
+                    </div>
+                    
+                    <div class="usuario">
+
+                        <label>Ubicación:</label>
+
+                        <input oninput="autoCompletar('ubicacion');" list="listaSugerencia" id="ubicacion" type="text">
+
+                    </div>
+
+                    <div class="usuario">
+
+                        <label>Identificación:</label>
+
+                        <input oninput="autoCompletar('identificacion');" id="identificacion" list="listaSugerencia" type="text">
+                        
+                    </div>
+
+                    <datalist id="listaSugerencia">
+                        
+                    </datalist>
+
+                    <!-- el id funciona para el backend -->
+                    <input id="botonBuscar" type="submit" value="Buscar">
+
+                </form>
+
+                <label>Ordenar:</label>
+
+                <select id="ordenar" onchange="ordenarListaMedico();">
+
+                    <option value="nombre">
+                        Nombre
+                    </option>
+
+                    <option value="especialidad">
+                        Especialidad
+                    </option>
+
+                    <option value="ubicacion">
+                        Ubicación
+                    </option>
+
+                    <option value="calificacion">
+                        Calificación
+                    </option>
+
+                </select>   
+            </div>
+
+            <table>
+                
+                <caption>Médicos</caption>
+
+                <thead>
+
+                    <tr>
+
+                        <th>Nombre</th>
+                        <th>Especialidad</th>
+                        <th>Ubicación</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody id="tablaMedico">
+
+                    <tr>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+            <div id="paginacion" class="paginacion">
+                
+                <button onclick=paginaAnterior()><<<</button>
+                <p id="pagina">1</p>
+                <button onclick=paginaSiguiente()>>>></button>
+            </div>
+
+        </div>  
+
+        <div class="modal">
+            <div class="contenidoModal">
+                
+                <h2>Nombre</h2>
+
+                    
+                    <p id="nombreModal">
+                    </p>
+
+
+                <h2>Especialidad</h2>
+
+                    <p id="especialidadModal">
+                        
+                    </p>
+
+
+                <h2>Horario</h2>
+
+                    <p id="horario">
+                        
+                    </p>
+
+
+                <h2>Teléfono</h2>
+
+                    <p id="telefono">
+
+                    
+                    </p>
+
+
+                <h2>Reseña</h2>
+
+                <p id="resenna">
+
+
+
+                </p>
+
+
+                <h2>Calificación</h2>
+                    <p id="calificacion">
+
+
+
+                    </p>
+
+
+                <h2>Biografía</h2>
+
+                <p id="biografia">
+
+                </p>
+                
+
+              <button class="cerrarModal">X</button>
+            </div>
+        </div>
+
+        <!-- footer -->
+    </main>
+
+    <!-- Colocar el header y el footer -->
+    <!-- Esta fuera de pages? true, false-->
+    <script>
+        colocarEstructura(false);
+    </script>
+    
+</body>
+
+</html>

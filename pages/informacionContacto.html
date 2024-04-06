@@ -1,0 +1,101 @@
+<!-- Define documento HTML5 y que el navegador va a dectectarlo -->
+<!DOCTYPE html>
+
+<html lang="es">
+
+<!-- Configuracion metadatos y enlances -->
+<head>
+    <!-- Utilizar caracteres con tilde -->
+    <meta charset="UTF-8">
+
+    <!-- Parte responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Clínica Árbol de Seda</title>
+    
+    <!-- rel importancion; href donde esta ubicado  -->
+    <link rel="stylesheet" type="text/css" href="../css/estilo.css">
+    
+    <script src="../js/usuario.js"></script>
+
+    <script src="../js/contacto.js"></script>
+
+    <script src="../js/estructura.js"></script>
+
+</head>
+
+<body>
+    
+    <!-- header -->
+
+    <main> 
+
+        <!-- Div, contenedores -->
+        <div class="contenido">
+           
+            <article>
+                
+                <section class="vertical">
+                    <h2>Dirección</h2>
+                    
+                    <div class="centrar">
+
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3930.3923116582187!2d-83.67453149072932!3d9.901246574688045!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa0d42417bc6851%3A0xd2ae13fcaa9ce072!2sUniversidad%20de%20Costa%20Rica%20(Sede%20del%20Atl%C3%A1ntico)!5e0!3m2!1ses-419!2scr!4v1711759227619!5m2!1ses-419!2scr" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                            
+                        </iframe>
+                        
+                    </div>
+                    
+                    <h2>Número de teléfono</h2>
+
+                    <p>8254-3124</p>
+
+                    <h2>Correo electrónico</h2>
+
+                    <p>clinicaarboldeseda@gmail.com</p>
+
+                </section>
+
+            </article>
+            
+            <div class="formulario">
+
+                <h2>Contacto</h2>
+
+                <form id="formulario" method="post">
+
+                    <div class="usuario">
+    
+                        <label>Correo:</label>
+    
+                        <input id="correo" type="email" required>
+    
+                    </div>
+                    
+                    <div class="usuario">
+    
+                        <label>Mensaje:</label>
+    
+                        <input id="mensaje" type="text" required>
+    
+                    </div>
+    
+                    <input id="botonEnviar" type="submit" value="Enviar">
+                    
+                </form>
+            </div>
+
+        </div>  
+
+        <!-- footer -->
+    </main>
+
+    <!-- Colocar el header y el footer -->
+    <!-- Esta fuera de pages? true, false-->
+    <script>
+        colocarEstructura(false);
+    </script>
+    
+</body>
+
+</html>

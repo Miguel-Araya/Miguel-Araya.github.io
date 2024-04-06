@@ -1,0 +1,216 @@
+<!-- Define documento HTML5 y que el navegador va a dectectarlo -->
+<!DOCTYPE html>
+
+<html lang="es">
+
+<!-- Configuracion metadatos y enlances -->
+<head>
+    <!-- Utilizar caracteres con tilde -->
+    <meta charset="UTF-8">
+
+    <!-- Parte responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Clínica Árbol de Seda</title>
+    
+    <!-- rel importancion; href donde esta ubicado  -->
+    <link rel="stylesheet" type="text/css" href="../css/estilo.css">
+    
+    <script src="../js/usuario.js"></script>
+
+    <script src="../js/agendaCita.js"></script>
+
+    <script src="../js/estructura.js"></script>
+
+</head>
+
+<body>
+    
+    <!-- header -->
+
+    <main> 
+
+        <!-- Div, contenedores -->
+        <div class="contenido">
+            
+            <div class="formulario">
+
+                <h2>Cita</h2>
+
+                <form id="formulario" method="post">
+
+                    <div class="usuario">
+
+                        <label>Especialidad:</label>
+
+                        <select id="especialidad" onchange="obtenerMedicoPorEspecialidad();" required>
+                            
+                            <option>Oftalmología</option>
+                            <option>Dermatología</option>
+                            
+                        </select>
+
+                    </div>
+                    
+                    <div class="usuario">
+
+                        <label>Médico:</label>
+
+                        <select id="medico" onchange="obtenerHoraMedico();" required>
+                            
+                        </select>
+
+                    </div>
+
+                    
+                    <div class="usuario">
+
+                        <label>Fecha:</label>
+
+                        <input id="fecha" type="date" placeholder="dd-mm-yyyy" required>
+
+                    </div>
+                    
+                    <div class="usuario">
+
+                        <label>Hora:</label>
+
+                        <select id="hora" required>
+
+
+
+                        </select>
+
+                    </div>
+
+                    <!-- el id funciona para el backend -->
+                    <input id="botonProgramar" type="submit" value="Programar">
+
+                </form>
+
+            </div>
+
+            <table>
+                
+                <caption>Calendario</caption>
+                   
+                <div class="centrar"><h2 id="mes">Mes</h2></div>
+                <div class="paginacion">
+
+                    <button onclick="mesAnterior();"><<<</button>
+                    
+                    <button onclick="mesSiguiente();">>>></button>
+
+                </div>
+
+                <thead>
+
+                    <tr>
+
+                        <th>Dom</th>
+                        <th>Lun</th>
+                        <th>Mar</th>
+                        <th>Mié</th>
+                        <th>Jue</th>
+                        <th>Vie</th>
+                        <th>Sáb</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody id="tablaCalendario" class="tablaCalendario">
+
+                    <tr>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>  
+        
+
+
+        <table>
+                
+            <caption>Citas</caption>
+
+            <thead>
+
+                <tr>
+
+                    <th>Médico</th>
+                    <th>Hora</th>
+                    <th>Fecha</th>
+                    
+                </tr>
+
+            </thead>
+
+            <tbody id="tablaCita">
+
+            </tbody>
+
+        </table>
+
+        <div class="modal">
+            <div class="contenidoModal">
+                
+                <h2>Medico</h2>
+
+                    
+                <p id="medicoModal">
+                </p>
+                
+                <h2>Especialidad</h2>
+
+                    <p id="especialidadModal">
+                        
+                    </p>
+
+
+                <h2>Hora</h2>
+
+                    <p id="horaModal">
+                        
+                    </p>
+
+
+                <h2>Estado</h2>
+
+                    <p id="estado">
+
+                    
+                    </p>
+
+
+                <h2>Fecha</h2>
+
+                <p id="fechaModal">
+
+
+
+                </p>
+
+                <h2>Nombre usuario</h2>
+                <p id="nombreUsuario"></p>
+                
+
+              <button class="cerrarModal">X</button>
+            </div>
+        </div>
+
+        <!-- footer -->
+    </main>
+
+    <!-- Colocar el header y el footer -->
+    <!-- Esta fuera de pages? true, false-->
+    <script>
+        colocarEstructura(false);
+    </script>
+    
+</body>
+
+</html>

@@ -1,0 +1,85 @@
+<!-- Define documento HTML5 y que el navegador va a dectectarlo -->
+<!DOCTYPE html>
+
+<html lang="es">
+
+<!-- Configuracion metadatos y enlances -->
+<head>
+    <!-- Utilizar caracteres con tilde -->
+    <meta charset="UTF-8">
+
+    <!-- Parte responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Clínica Árbol de Seda</title>
+    
+    <!-- rel importancion; href donde esta ubicado  -->
+    <link rel="stylesheet" type="text/css" href="../css/estilo.css">
+    
+    <script src="../js/crypto-js.min.js"></script>
+    
+    <script src="../js/usuario.js"></script>
+
+    <script src="../js/inicioSesion.js"></script>
+
+    <script src="../js/estructura.js"></script>
+
+</head>
+
+<body>
+    
+    <!-- header -->
+    
+    <main> 
+
+        <!-- Div, contenedores -->
+        <div class="contenido">
+           
+            <div class="formulario">
+
+                <h2>Iniciar Sesión</h2>
+
+                <form id="formulario" method="post">
+
+                    <div class="usuario">
+
+                        <label>Cédula de identidad:</label>
+
+                        <input oninput=formatoCedula(); id="cedula" placeholder="Formato ##-####-####" type="text" required>
+
+                    </div>
+                    
+                    <div class="usuario">
+
+                        <label>Contraseña:</label>
+
+                        <input oninput=formatoContrasenna(); id="contrasenna" type="password" required>
+
+                    </div>
+
+                    <p id="intento"><p>
+
+                    <!-- el id funciona para el backend -->
+                    <input id="botonIngresar" type="submit" value="Ingresar">
+
+                    <p><a href="registroUsuario.html">¿Necesita crear un usuario?</a></p>
+                    <p><a href="enviarVerificacion.html">¿No recuerda la contraseña?</a></p>
+                    
+                </form>
+
+            </div>
+
+        </div>  
+
+        <!-- footer -->
+    </main>
+
+    <!-- Colocar el header y el footer -->
+    <!-- Esta fuera de pages? true, false-->
+    <script>
+        colocarEstructura(false);
+    </script>
+    
+</body>
+
+</html>

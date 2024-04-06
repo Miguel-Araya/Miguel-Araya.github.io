@@ -10,28 +10,82 @@
 
 }
 
+table{
+
+    margin: 0 auto;
+    margin-bottom: 10px;
+    background-color: #1F2633;
+    color: white;
+    text-align: justify;
+}
+
+caption {
+
+    background-color: #4072d6;
+    font-size: 1em;
+}
+
+article a{
+
+    margin: 20px 0 20px 0;
+    color: #414040;
+    text-decoration: none;
+    font-size: 1.3em;
+}
+
+article a:hover{
+
+    /* es lo que tarda en mouse, tarda 0.3 en poner el color */
+    transition: color 0.3s ease;
+    color: black;
+
+}
+
+.tablaCalendario button{
+
+    border-radius: 10px;
+    padding: 3px;
+} 
+
+article p, details{
+
+    color: #414040;
+    margin: 20px 0 20px 0;
+    text-align: justify;
+}
+
+.contenidoModal p{
+
+    text-align: justify;
+
+}
+
+article h2{
+
+    color: #1F2633;
+    margin-top: 10px;
+    text-align: center;
+}
+
 h1{
 
     text-align: center;
 
-    /* colores primarios rgb */
-    background-color: rgb(0, 73, 83);
-
+    background-color: #4F7DDA;
+    
     /* color letra */
     color: white;
 
     padding: 20px;
 
     /* medida de pixeles em */
-    font-size: 2.5em;
 
 }
 
-/* todos los elementos de la lista */
 nav ul{ 
 
-    background-color: rgb(0,178,178);
-
+    background-color: #5D7199;
+    
     width: 100%;
 
     list-style: none;
@@ -42,13 +96,14 @@ nav ul{
 
 }  
 
+
 nav ul li{
 
     display: inline-block;
 
+    padding-top: 10px;
+
     margin-right: 20px;
-
-
 
 }
 
@@ -62,7 +117,7 @@ nav ul li a{
 
     text-decoration: none;
 
-    color: #FFF;
+    color: white;
 
     font-weight: bold;
 
@@ -72,21 +127,20 @@ nav ul li a{
 
     transition: background-color 0.3s ease;
 
-    font-size: 1.5em;
-
+    cursor: pointer;
 }
 
 nav ul li a:hover{
     /* 0.2 opacidad */
-    background-color: rgba(255, 255,255, 0.2);
+    background-color: rgba(0, 0, 0, 0.2);
 
 }
 
 img{
 
-    width: 200px;
+    width: 175px;
 
-    height: 200px;
+    height: 175px;
     
     /* redondea los bordes de la imagen */
     border-radius: 50%;
@@ -96,81 +150,32 @@ img{
 
 }
 
-.contenido{
-
-    /* contenedor flexible, sus elementos flexibles */
-    display: flex;
-    margin: 60px;
-}
-
-.articulos{
-
-    width: 80%;
-    margin: 0 auto;
-    padding: 20px;
-    border-right: 3px solid #a6a1a1;
-
-}
-
-.secciones{
-
-    display: flex;
-    align-items: center;
-    padding: 40px;
-    font-size: 1.5em;
-
-}
-
-.menu-secundario{
-
-    width: 20%;
-    margin-top: 60px;
-
-}
-
-.menu-secundario a{
-
-    display: block;
-    text-align: center;
-    color: rgba(23,23,23,0.749);
-    margin-bottom: 20px;
-    padding: 10px 20px;
-    background-color: #f2f2f2;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-    font-size: 1.5em;
-
-}
-
-.menu-secundario a:hover{
-
-    background-color: #dcdcdc;
-
+body{
+    position: relative;
+    padding-bottom: 12em;
+    min-height: 100vh;
 }
 
 footer{
-
-    position: fixed;
+    position: absolute;
     bottom: 0;
     width: 100%;
-    background-color: #333;
-    color: #fff;
+    background-color: #1F2633;
+    color: white;
     text-align: center;
-    padding: 20px 0;
-
+    padding: 10px 0;
 }
 
 footer p{
 
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 
 }
 
 footer a{
 
-    color: #fff;
-    text-decoration: none;
+    color: white;
+    text-decoration: underline;
 
     /* es lo que tarda en mouse, tarda 0.3 en poner el color */
     transition: color 0.3s ease;
@@ -178,47 +183,795 @@ footer a{
 
 footer a:hover{
 
-    color: #f2f2f2;
+    color: rgb(201, 200, 200)
 
 }
 
-/*INICIO DE SESION*/
+details{
 
+    color: #414040;
+    margin: 20px 0 20px 0;
+    cursor: pointer;
+}
+
+iframe{
+    border: 0;
+    margin: 10px 0 10px 0;
+}
+
+/* inicio formulario */
 .formulario{
 
-    width: 400px;
+    display: flex;
+    flex-direction: column;
     margin: 0 auto;
-    background-color: #f2f2f2;
+    color: white;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: #4072d6;
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     padding: 20px;
 
 }
 
+.formulario h2{
+
+    margin-bottom: 10px;
+    
+}
+
+.formulario p{
+
+    margin-top: 15px;
+
+}
+
+.formulario a:hover{
+
+    /* es lo que tarda en mouse, tarda 0.3 en poner el color */
+    transition: color 0.3s ease;
+    color: rgb(196, 193, 193);
+
+}
+
+.formulario a{
+
+    color: white;
+    text-decoration: none;
+}
+
 .formulario input[type="password"],
-.formulario input[type="email"]{
+.formulario input[type="email"],
+.formulario input[type="text"],
+.formulario input[type="number"],
+.formulario input[type="time"],
+.formulario input[type="date"],
+select{
 
     width: 100%;
-    padding: 10px;
-    margin: 8px 0;
-    border: 1px solid #7e7e7e;
-    border-radius: 4px;
+    border: 1px solid black;
+    border-radius: 8px;
     box-sizing: border-box;
 
 }
 
 .formulario input[type="submit"]{
 
-    background-color: rgb(0,73,83);
+    background-color: #1F2633;
     color: white;
-    padding: 10px 20px;
+    margin-top: 10px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
 }
 
-.formulario input[type="submit"]:hover{
+/* fin formulario */
 
-    background-color: rgb(0,178,178);
+
+/* inicio carrusel */
+.carrusel{
+
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: scroll;
+    background-color: #4F7DDA;
+    
+}
+
+.carrusel p{
+
+    color: white;
 
 }
+
+.contenidoCarrusel{
+
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: auto;
+    margin: 0 50px;
+    width: 100px;
+    height: 200px;
+    
+
+}
+/* fin carrusel */
+
+/* inicio animacion */
+
+.hojaPapel{
+
+    width: 200px;
+    height: 200px;
+    margin: 20px 0 0 0;
+    background-color: white;
+    border: 3px solid black;
+    position: relative;
+    display: block;
+
+}
+
+select{
+
+    margin: 20px 0 0 0;
+
+}
+
+.paginacion{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+
+}
+
+.paginacion button{
+
+    background-color:#4072d6;
+    color: white;
+    margin-right: 4px;
+}
+
+.centrar{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hojaPapel div p{
+    font-size: 2.2em;
+    text-decoration: none;
+    color: green;
+    display: flex;
+    align-items: end;
+    justify-content: end;
+}
+
+.lineaTexto{
+
+    margin-top: 25%;
+    width: 15%;
+    border-top: 1.5px solid black;
+    animation: aumentarLineaTexto 6s infinite normal;
+}
+
+@keyframes aumentarLineaTexto{
+
+    75%{
+
+       width: 100%;
+       content: 'hola';
+    }
+    
+}
+
+/* fin animacion */
+.citaPendiente{
+
+    border-style: dotted;
+    color:white;
+    background-color: #4072d6;
+
+}
+
+
+/* modal */
+
+.modal {
+    display: none;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    border-radius: 10px;
+}
+
+.contenidoModal {
+    padding: 20px;
+    background-color: #4072d6;
+    color: white;
+}
+
+.cerrarModal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+/* calendario */
+
+article{
+    margin: 0 auto; /* Centrar horizontalmente */
+    padding: 20px; /* Agregar espacio interno */
+    border-right: 3px solid #a6a1a1; /* Cambiar el color del borde */
+}
+
+.vertical{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3px;    
+
+}
+
+.horizontal{
+
+    display: flex;
+    align-items: center;
+    padding: 3px; 
+
+}
+
+ /* Extra pequennos*/
+ @media only screen and (max-width: 600px) {
+
+    iframe{
+
+        width: 150px;
+        height: 150px;
+        
+    }
+
+    article p, details, .contenidoModal p{
+
+        font-size: 0.9em;
+    }
+
+    .modal{
+
+        width: 220px;
+        height: 300px;
+
+    }
+
+    h1{
+
+        font-size: 1.2em;
+
+    }
+
+    nav ul li a{
+        font-size: 0.9em;
+    }
+
+    h2{
+
+        font-size: 1em;
+
+    }
+
+    footer{
+
+        font-size: 0.85em;
+
+    }
+
+    
+    .formulario{
+
+        width: 205px;
+
+    }
+
+    .formulario label{
+
+        font-size: 0.9em;
+
+    }
+
+    .formulario input[type="password"],
+    .formulario input[type="email"],
+    .formulario input[type="text"],
+    .formulario input[type="number"],
+    .formulario input[type="time"],
+    .formulario input[type="date"],
+    select{
+
+        padding: 5px;
+        margin: 5px 0;
+        font-size: 0.75em;
+    }
+
+    .formulario input[type="submit"]{
+
+        font-size: 0.9em;
+        padding: 5px 10px;
+
+    }
+
+    .formulario a{
+
+        font-size: 0.9em;
+
+    }
+
+    table{
+
+        font-size: 0.78em;
+        max-width: 200px;
+    }
+
+    table button{
+
+        font-size: 0.75em;
+
+    }
+
+    .paginacion p{
+
+        font-size: 0.9em;
+
+    }
+
+    .paginacion button{
+
+        font-size: 0.8em;
+
+    }
+
+ }  
+
+ /* Pequennos*/
+ @media only screen and (min-width: 600px) {
+
+    .modal{
+
+        width: 290px;
+        height: 290px;
+
+    }
+
+    iframe{
+
+        width: 400px;
+        height: 300px;
+        
+    }
+
+    article p, details, .contenidoModal p{
+
+        font-size: 1.2em;
+    }
+
+    h1{
+
+        font-size: 1.4em;
+
+    }
+
+    nav ul li a{
+        font-size: 1.1em;
+    }
+
+    h2{
+
+        font-size: 1.2em;
+
+    }
+
+    footer{
+
+        font-size: 0.9em;
+
+    }
+
+    .formulario{
+
+        width: 400px;
+
+    }
+
+    .formulario label{
+
+        font-size: 1em;
+
+    }
+
+    .formulario input[type="password"],
+    .formulario input[type="email"],
+    .formulario input[type="text"],
+    .formulario input[type="number"],
+    .formulario input[type="time"],
+    .formulario input[type="date"],
+    select{
+
+        padding: 5px;
+        margin: 5px 0;
+        font-size: 1em;
+    }
+
+    .formulario input[type="submit"]{
+
+        font-size: 1em;
+        padding: 5px 10px;
+
+    }
+
+    .formulario a{
+
+        font-size: 1em;
+
+    }
+
+    table{
+
+        font-size: 1em;
+        max-width: 400px;
+    }
+
+    table button{
+
+        font-size: 1em;
+
+    }
+
+    .paginacion p{
+
+        font-size: 1em;
+
+    }
+
+    .paginacion button{
+
+        font-size: 1em;
+
+    }
+
+ }
+ 
+ /* Medianos */
+ @media only screen and (min-width: 768px) {
+
+    .modal{
+
+        width: 400px;
+        height: 400px;
+
+    }
+    
+    iframe{
+
+        width: 600px;
+        height: 450px;
+        
+    }
+
+    article p, details, .contenidoModal p{
+
+        font-size: 1.3em;
+        max-width: 70%;
+        
+    }
+
+    h1{
+
+        font-size: 1.8em;
+
+    }
+
+    nav ul li a{
+        font-size: 1.4em;
+    }
+
+    h2{
+
+        font-size: 1.5em;
+
+    }
+
+    
+    footer{
+
+        font-size: 1em;
+
+    }
+
+    .formulario{
+
+        width: 400px;
+
+    }
+
+    .formulario label{
+
+        font-size: 1.1em;
+
+    }
+
+    .formulario input[type="password"],
+    .formulario input[type="email"],
+    .formulario input[type="text"],
+    .formulario input[type="number"],
+    .formulario input[type="time"],
+    .formulario input[type="date"],
+    select{
+
+        padding: 5px;
+        margin: 5px 0;
+        font-size: 0.9em;
+    }
+
+    .formulario input[type="submit"]{
+
+        font-size: 1.1em;
+        padding: 5px 10px;
+
+    }
+
+    .formulario a{
+
+        font-size: 0.9em;
+
+    }
+    
+    table{
+
+        font-size: 1.2em;
+        max-width: 400px;
+    }
+
+    table button{
+
+        font-size: 0.8em;
+
+    }
+    
+    .paginacion p{
+
+        font-size: 1.3em;
+
+    }
+
+    .paginacion button{
+
+        font-size: 1em;
+
+    }
+
+ }
+ 
+ /* Grandes */
+ @media only screen and (min-width: 992px) {
+
+    .modal{
+
+        width: 500px;
+        height: 400px;
+
+    }
+
+    iframe{
+
+        width: 600px;
+        height: 450px;
+        
+    }
+
+    article p, details, .contenidoModal p{
+
+        font-size: 1.4em;
+        max-width: 75%;
+        
+    }
+
+    h1{
+
+        font-size: 1.8em;
+
+    }
+
+    nav ul li a{
+        font-size: 1.4em;
+    }
+
+    h2{
+
+        font-size: 1.5em;
+
+    }
+
+    
+    footer{
+
+        font-size: 1em;
+
+    }
+
+    .formulario{
+
+        width: 400px;
+
+    }
+
+    .formulario label{
+
+        font-size: 1.2em;
+
+    }
+
+    .formulario input[type="password"],
+    .formulario input[type="email"],
+    .formulario input[type="text"],
+    .formulario input[type="number"],
+    .formulario input[type="time"],
+    .formulario input[type="date"],
+    select{
+
+        padding: 5px;
+        margin: 5px 0;
+        font-size: 1em;
+    }
+
+    .formulario input[type="submit"]{
+
+        font-size: 1.2em;
+        padding: 5px 10px;
+
+    }
+
+    .formulario a{
+
+        font-size: 1em;
+
+    }
+    
+    table{
+
+        font-size: 1.3em;
+        max-width: 400px;
+    }
+
+    table button{
+
+        font-size: 0.8em;
+
+    }
+    
+    .paginacion p{
+
+        font-size: 1.3em;
+
+    }
+
+    .paginacion button{
+
+        font-size: 1em;
+
+    }
+
+ }
+ 
+ /* ExtraGrandes */
+ @media only screen and (min-width: 1200px) {
+
+    .modal{
+
+        width: 500px;
+        height: 400px;
+
+    }
+
+    iframe{
+
+        width: 600px;
+        height: 450px;
+        
+    }
+
+    article p, details, .contenidoModal p{
+
+        font-size: 1.4em;
+        max-width: 75%;
+        
+    }
+
+    h1{
+
+        font-size: 1.8em;
+
+    }
+
+    nav ul li a{
+        font-size: 1.4em;
+    }
+
+    h2{
+
+        font-size: 1.5em;
+
+    }
+
+    
+    footer{
+
+        font-size: 1em;
+
+    }
+
+    .formulario{
+
+        width: 400px;
+
+    }
+
+    .formulario label{
+
+        font-size: 1.2em;
+
+    }
+
+    .formulario input[type="password"],
+    .formulario input[type="email"],
+    .formulario input[type="text"],
+    .formulario input[type="number"],
+    .formulario input[type="time"],
+    .formulario input[type="date"],
+    select{
+
+        padding: 5px;
+        margin: 5px 0;
+        font-size: 1em;
+    }
+
+    .formulario input[type="submit"]{
+
+        font-size: 1.2em;
+        padding: 5px 10px;
+
+    }
+
+    .formulario a{
+
+        font-size: 1em;
+
+    }
+    
+    table{
+
+        font-size: 1.3em;
+        max-width: 400px;
+    }
+
+    table button{
+
+        font-size: 0.8em;
+
+    }
+    
+    .paginacion p{
+
+        font-size: 1.3em;
+
+    }
+
+    .paginacion button{
+
+        font-size: 1em;
+
+    }
+
+} 
